@@ -1,0 +1,30 @@
+.resumenAdminParalelo {
+    padding: 20px;
+    border-radius: 5%;
+    border: 1px solid grey;
+    box-shadow: grey;
+    transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    /* Firefox */
+    -webkit-transition: 0.5s ease;
+    /* Chrome - Safari */
+    -o-transition: 0.5s ease;
+    /* Opera */
+}
+
+.resumenAdminParalelo:hover {
+    background-color: rgb(228, 227, 227);
+    transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    /* Firefox */
+    -webkit-transform: scale(1.05);
+    /* Chrome - Safari */
+    -o-transform: scale(1.05);
+    /* Opera */
+    -ms-transform: scale(1.05);
+    /* IE9 */
+}
+
+.p-info {
+    font-size: 16px;
+}

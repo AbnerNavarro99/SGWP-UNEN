@@ -1,0 +1,11 @@
+.BotonDescargaExcel {
+    padding: 5px;
+    border: none;
+    color: white;
+    background-color: royalblue;
+}
+
+.BotonDescargaExcel:hover {
+    cursor: pointer;
+    background-color: rgb(50, 84, 185);
+}

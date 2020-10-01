@@ -1,0 +1,103 @@
+.HomePage {
+    border: 1px solid transparent;
+    min-height: calc(100vh - 65px);
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.HomePage>.row {
+    margin-top: 5%;
+    /* background-color: rgba(255, 255, 255, 0.096); */
+}
+
+.unenLogos,
+.Entrar {
+    /* border: 1px solid orange; */
+    margin: 0;
+    padding: 0;
+}
+
+.unenLogos {
+    border-right: 1px solid black;
+}
+
+.content-panel {
+    /* background-color: blue; */
+    width: 90%;
+    margin: 0 auto;
+    height: 400px;
+    padding: 5%;
+}
+
+.logo {
+    /* background-color: red; */
+    margin-top: 20px;
+}
+
+#logoANECYS,
+#logoUNEN {
+    width: 150px;
+}
+
+.logoImg {
+    /* background-color: green; */
+    width: 50%;
+    margin: 0 auto;
+}
+
+.IniciarSesion,
+.Registrarse {
+    /* background-color: red; */
+}
+
+.IniciarSesion p,
+.Registrarse p {
+    text-align: center;
+    font-style: italic;
+}
+
+.EntrarDiv {
+    /* border: 1px solid green; */
+    width: 90%;
+    margin: 15% auto;
+}
+
+.botonIniciarSesion,
+.botonRegistrarse {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #logoANECYS,
+    #logoUNEN {
+        width: 100px;
+    }
+    .logoImg {
+        /* background-color: green; */
+        width: 100px;
+        margin: 0 auto;
+    }
+    .unenLogos {
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    .HomePage>.row {
+        margin-top: 5%;
+        padding: 15px;
+    }
+    .content-panel {
+        /* background-color: blue; */
+        width: 100%;
+        min-height: auto;
+    }
+    .unenLogos {
+        max-height: 150px;
+    }
+    .CambiarTamañoPantallaAPequeño {
+        font-size: 2.5em;
+    }
+}

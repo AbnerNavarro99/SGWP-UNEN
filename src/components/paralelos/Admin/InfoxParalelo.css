@@ -1,0 +1,16 @@
+.mainLayout {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: calc(100vh - 65px - 60px - 30px);
+    padding: 15px 10px;
+    background-color: #d4d5d8;
+}
+
+.adminInfoxParalelo {
+    margin: 0 2%;
+}
+
+.lista-usuariosxParalelo {
+    background-color: white;
+    padding: 15px;
+}
