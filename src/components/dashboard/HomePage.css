@@ -11,7 +11,7 @@ a {
 
 .HomePage>.row {
     margin-top: 5%;
-    /* background-color: rgba(255, 255, 255, 0.096); */
+    background-color: rgba(255, 255, 255, 0.096);
 }
 
 .unenLogos,
@@ -71,23 +71,44 @@ a {
     width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     #logoANECYS,
     #logoUNEN {
         width: 100px;
     }
+    .HomePage>.row {
+        margin-top: 5%;
+        background-color: inherit;
+    }
+    .content-panel>.row {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .content-panel>.row>.col {
+        margin: 10% 0;
+        padding: 0;
+    }
+    .content-panel>.row>.col>.logoImg {
+        padding: 0;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .content-panel {
+        padding: 0;
+        margin: 0;
+    }
     .logoImg {
         /* background-color: green; */
-        width: 100px;
         margin: 0 auto;
     }
     .unenLogos {
         border: none;
-        border-bottom: 1px solid black;
     }
     .HomePage>.row {
         margin-top: 5%;
         padding: 15px;
+        background-color: none;
     }
     .content-panel {
         /* background-color: blue; */

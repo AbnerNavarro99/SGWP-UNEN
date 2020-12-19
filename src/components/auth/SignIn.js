@@ -32,33 +32,37 @@ class SignIn extends Component {
             )
         }
         return (
-            <div className="section" >
-                <form onSubmit={this.onHandleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Iniciar Sesión</h5>
-                    <div className="input-field">
-                        <label htmlFor="correo">Correo Electrónico </label>
-                        <input type="email" id="correo" onChange={this.onHandleChange} required/>
-                    </div>
+            <div className="container" >
+                <div className="row">
+                    <div>
+                        <form onSubmit={this.onHandleSubmit} className="white">
+                            <h5 className="grey-text text-darken-3" style={{textAlign:"center"}}>Iniciar Sesión</h5>
+                            <div className="input-field">
+                                <label htmlFor="correo">Correo Electrónico </label>
+                                <input type="email" id="correo" onChange={this.onHandleChange} required />
+                            </div>
 
-                    <div className="input-field">
-                        <label htmlFor="contrasenha">Contraseña</label>
-                        <input type="password" id="contrasenha" onChange={this.onHandleChange} required/>
-                    </div>
+                            <div className="input-field">
+                                <label htmlFor="contrasenha">Contraseña</label>
+                                <input type="password" id="contrasenha" onChange={this.onHandleChange} required />
+                            </div>
 
 
-                    <div className="input-field">
-                        <button className="btn pink ligthen-1 z-depth-0">
-                            ENTRAR
+                            <div className="input-field" style={{textAlign:"center"}}>
+                                <button className="btn pink ligthen-1 z-depth-0">
+                                    ENTRAR
                         </button>
-                    </div>
+                            </div>
 
-                    <div className="red-text center">
-                        {
-                            authError &&
-                            <p>{authError}</p>
-                        }
+                            <div className="red-text center">
+                                {
+                                    authError &&
+                                    <p>{authError}</p>
+                                }
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         )
     }

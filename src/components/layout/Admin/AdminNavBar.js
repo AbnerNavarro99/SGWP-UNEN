@@ -8,6 +8,7 @@ import './../NavBar.css';
 
 const NavBar = (props) => {
     const { auth } = props;
+
     return (
         <nav className="nav-wrapper blue darken-1 NavBar">
             <div className="container">

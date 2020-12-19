@@ -10,23 +10,23 @@ class HomePage extends Component {
         return (
             <div className="container HomePage">
                 <div className="row">
-                    {/* <div className="col s12 m12 l6 unenLogos">
+                    <div className="col s12 m6 unenLogos">
                         <div className="content-panel">
                             <div className="row">
-                                <div className="col s6 l12 logo">
+                                <div className="col s6 m12 logo">
                                     <div className="logoImg">
                                         <img src="https://firebasestorage.googleapis.com/v0/b/sistema-web-paralelos-unen.appspot.com/o/ANECYSLOGO2.png?alt=media&token=73b82941-d627-46ed-9a8d-a4f016c84951" id="logoANECYS" alt="LOGO ANECYS" />
                                     </div>
                                 </div>
-                                <div className="col s6 l12 logo">
+                                <div className="col s6 m12 logo">
                                     <div className="logoImg">
                                         <img src="https://firebasestorage.googleapis.com/v0/b/sistema-web-paralelos-unen.appspot.com/o/UNENLOGO2.png?alt=media&token=9b4b9f6f-1106-41ac-a385-b055bda6cfaa" id="logoUNEN" alt="LOGO UNEN" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div> */}
-                    {/* <div className="col s12 m12 l6 Entrar">
+                    </div>
+                    <div className="col s12 m6 Entrar">
                         <div className="content-panel">
                             <div className="EntrarDiv white-text">
                                 <div className="row IniciarSesion">
@@ -69,12 +69,14 @@ class HomePage extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div> */}
-                    <div className="col s12 m8 l8 white-text offset-l2 offset-m2">
+                    </div>
+                   
+                    {/* <div className="col s12 m8 l8 white-text offset-l2 offset-m2">
                         <h1 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">Sitio Web en Mantenimiento</h1>
                         <img src={EnMantenimiento} alt="" width="100%"/>
                         <h3 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">!Feliz semestre!</h3>
-                    </div>
+                    </div> 
+                    */}
                 </div>
             </div >
         );

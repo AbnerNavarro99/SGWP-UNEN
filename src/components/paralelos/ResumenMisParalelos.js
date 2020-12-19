@@ -16,7 +16,7 @@ class ResumenParalelo extends React.Component {
         const { paralelo } = this.props;
         const ButtonParalelo =
             <Button node="button" className="btn red ligthen-1 z-depth-0 boton-Inscribir">
-                Eliminar Paralelo
+                Eliminar Verano
             </Button>
         const datePublicacion = paralelo.publicacion.toDate();
         moment.locale('es');
@@ -38,8 +38,8 @@ class ResumenParalelo extends React.Component {
                             style={{ color: 'green' }}
                         >Inscritos actualmente: {paralelo.cantidadInscritos} estudiante(s).</p>
                         <p>Docente impartiente: {paralelo.docente}.</p>
-                        <h4 style={{ textAlign: 'center' }}>Horario del Paralelo</h4>
-                        <img src={paralelo.urlHorario} alt="Horario del Paralelo (Pendiente de acuerdo)" width="100%" />
+                        <h4 style={{ textAlign: 'center' }}>Horario del Verano</h4>
+                        <img src={paralelo.urlHorario} alt="Horario del Verano (Pendiente de acuerdo)" width="100%" />
                     </div>
 
                     <div className="card-action text-grey ligthen-4 grey-text">

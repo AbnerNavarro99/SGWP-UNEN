@@ -20,6 +20,7 @@ class InfoxParalelo extends Component {
         let usuariosEnParalelo = [];
         usuarios && id && pagos &&
             usuarios.forEach(user => {
+                if(user.paralelosInscritos)
                 if (user.paralelosInscritos.includes(id)) {
                     usuariosEnParalelo = [...usuariosEnParalelo, user];
                 }

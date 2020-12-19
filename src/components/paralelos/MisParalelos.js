@@ -22,7 +22,7 @@ const MisParalelos = (props) => {
         });
     return (
         <div className="lista-paralelos section">
-            <h2 className="container section white-text">Paralelos Inscritos</h2>
+            <h2 className="container section white-text">Veranos Inscritos</h2>
             {paralelosAMostrar &&
                 paralelosAMostrar.map(paralelo => {
                     return (

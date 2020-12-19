@@ -10,7 +10,7 @@ class SignIn extends Component {
         correoCorrecto: null,
         contrasenha: '',
         confContrasenha: '',
-        confContrasenhaCorrecto : null,
+        confContrasenhaCorrecto: null,
         nombres: '',
         nombresCorrecto: null,
         apellidos: '',
@@ -101,11 +101,11 @@ class SignIn extends Component {
 
         if (contrasenha === confContrasenha) {
             this.setState({
-                confContrasenhaCorrecto : true
+                confContrasenhaCorrecto: true
             })
-        }else{
+        } else {
             this.setState({
-                confContrasenhaCorrecto : false
+                confContrasenhaCorrecto: false
             })
             return
         }
@@ -163,106 +163,108 @@ class SignIn extends Component {
             )
         }
         return (
-            <div className="section">
-                <form onSubmit={this.onHandleSubmit} className="white col s12">
-                    <h5 className="grey-text text-darken-3">Registrarse</h5>
-                    <div className="input-field">
-                        <label htmlFor="correo">Correo Electrónico </label>
-                        <input type="email" id="correo" onChange={this.onHandleChange}
-                            required
-                        />
-                        {
-                            correoCorrecto !== null &&
-                                !correoCorrecto ?
-                                <p style={{ color: 'red', textAlign: 'left' }}>Digite un correo válido</p> :
-                                null
-                        }
-                    </div>
+            <div className="container">
+                <div className="row">
+                    <form onSubmit={this.onHandleSubmit} className="white">
+                        <h5 className="grey-text text-darken-3" style={{textAlign:"center"}}>Registrarse</h5>
+                        <div className="input-field">
+                            <label htmlFor="correo">Correo Electrónico </label>
+                            <input type="email" id="correo" onChange={this.onHandleChange}
+                                required
+                            />
+                            {
+                                correoCorrecto !== null &&
+                                    !correoCorrecto ?
+                                    <p style={{ color: 'red', textAlign: 'left' }}>Digite un correo válido</p> :
+                                    null
+                            }
+                        </div>
 
-                    <div className="input-field">
-                        <label htmlFor="contrasenha">Contraseña</label>
-                        <input type="password" id="contrasenha" onChange={this.onHandleChange}
-                            required
-                        />
-                    </div>
+                        <div className="input-field">
+                            <label htmlFor="contrasenha">Contraseña</label>
+                            <input type="password" id="contrasenha" onChange={this.onHandleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="input-field">
-                        <label htmlFor="confContrasenha">Confirmar Contraseña</label>
-                        <input type="password" id="confContrasenha" onChange={this.onHandleChange}
-                            required
-                        />
-                        {
-                            confContrasenhaCorrecto !== null &&
-                                !confContrasenhaCorrecto ?
-                                <p style={{ color: 'red', textAlign: 'left' }}>Las contraseñas no coinciden</p> :
-                                null
-                        }
-                    </div>
+                        <div className="input-field">
+                            <label htmlFor="confContrasenha">Confirmar Contraseña</label>
+                            <input type="password" id="confContrasenha" onChange={this.onHandleChange}
+                                required
+                            />
+                            {
+                                confContrasenhaCorrecto !== null &&
+                                    !confContrasenhaCorrecto ?
+                                    <p style={{ color: 'red', textAlign: 'left' }}>Las contraseñas no coinciden</p> :
+                                    null
+                            }
+                        </div>
 
-                    <div className="input-field">
-                        <label htmlFor="nombres">Nombres</label>
-                        <input type="text" id="nombres" onChange={this.onHandleChange}
-                            required
-                        />
-                        {
-                            nombresCorrecto !== null &&
-                                !nombresCorrecto ?
-                                <p style={{ color: 'red', textAlign: 'left' }}>Digite su(s) nombre(s) correctamente</p> :
-                                null
-                        }
-                    </div>
+                        <div className="input-field">
+                            <label htmlFor="nombres">Nombres</label>
+                            <input type="text" id="nombres" onChange={this.onHandleChange}
+                                required
+                            />
+                            {
+                                nombresCorrecto !== null &&
+                                    !nombresCorrecto ?
+                                    <p style={{ color: 'red', textAlign: 'left' }}>Digite su(s) nombre(s) correctamente</p> :
+                                    null
+                            }
+                        </div>
 
-                    <div className="input-field">
-                        <label htmlFor="apellidos">Apellidos</label>
-                        <input type="text" id="apellidos" onChange={this.onHandleChange}
-                            required
-                        />
-                        {
-                            apellidosCorrecto !== null &&
-                                !apellidosCorrecto ?
-                                <p style={{ color: 'red', textAlign: 'left' }}>Digite su(s) apellido(s) correctamente</p> :
-                                null
-                        }
-                    </div>
+                        <div className="input-field">
+                            <label htmlFor="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" onChange={this.onHandleChange}
+                                required
+                            />
+                            {
+                                apellidosCorrecto !== null &&
+                                    !apellidosCorrecto ?
+                                    <p style={{ color: 'red', textAlign: 'left' }}>Digite su(s) apellido(s) correctamente</p> :
+                                    null
+                            }
+                        </div>
 
-                    <div className="input-field">
-                        <label htmlFor="noCarnet">Número de Carnet</label>
-                        <input type="text" id="noCarnet" onChange={this.onHandleChange}
-                            required
-                        />
-                        {
-                            noCarnetCorrecto !== null &&
-                                !noCarnetCorrecto ?
-                                <p style={{ color: 'red', textAlign: 'left' }}>Carnet No Valido. Ejemplo de carnet: 2020-1000U</p> :
-                                null
-                        }
-                    </div>
+                        <div className="input-field">
+                            <label htmlFor="noCarnet">Número de Carnet</label>
+                            <input type="text" id="noCarnet" onChange={this.onHandleChange}
+                                required
+                            />
+                            {
+                                noCarnetCorrecto !== null &&
+                                    !noCarnetCorrecto ?
+                                    <p style={{ color: 'red', textAlign: 'left' }}>Carnet No Valido. Ejemplo de carnet: 2020-1000U</p> :
+                                    null
+                            }
+                        </div>
 
-                    <div className="input-field">
-                        <label htmlFor="noTelefono">Número de Teléfono</label>
-                        <input type="text" id="noTelefono" onChange={this.onHandleChange}
-                            required
-                        />
-                        {
-                            noTelefonoCorrecto !== null &&
-                                !noTelefonoCorrecto ?
-                                <p style={{ color: 'red', textAlign: 'left' }}>Telefono no válido. Ejemplo de teléfono: 7987-6543</p> :
-                                null
-                        }
-                    </div>
+                        <div className="input-field">
+                            <label htmlFor="noTelefono">Número de Teléfono</label>
+                            <input type="text" id="noTelefono" onChange={this.onHandleChange}
+                                required
+                            />
+                            {
+                                noTelefonoCorrecto !== null &&
+                                    !noTelefonoCorrecto ?
+                                    <p style={{ color: 'red', textAlign: 'left' }}>Telefono no válido. Ejemplo de teléfono: 7987-6543</p> :
+                                    null
+                            }
+                        </div>
 
-                    <div className="input-field">
-                        <button className="btn pink ligthen-1 z-depth-0">
-                            REGISTRARSE
+                        <div className="input-field" style={{textAlign:"center"}}>
+                            <button className="btn pink ligthen-1 z-depth-0" >
+                                REGISTRARSE
                         </button>
-                    </div>
-                    {
-                        authError ?
-                            <p style={{ color: 'red', textAlign: 'center' }}>{authError}</p> :
-                            null
-                    }
+                        </div>
+                        {
+                            authError ?
+                                <p style={{ color: 'red', textAlign: 'center' }}>{authError}</p> :
+                                null
+                        }
 
-                </form>
+                    </form>
+                </div>
             </div>
         )
     }

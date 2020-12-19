@@ -11,6 +11,7 @@ import MisParalelos from './components/paralelos/MisParalelos';
 import { connect } from 'react-redux';
 import NotFound from './components/dashboard/NotFound';
 import InfoxParalelo from './components/paralelos/Admin/InfoxParalelo';
+import NuevoParalelo from './components/paralelos/NuevoParalelo';
 
 function App(props) {
   const { isAdmin } = props;
@@ -25,7 +26,7 @@ function App(props) {
             <Route path="/admin/infoparalelos/:id" component={InfoxParalelo} />
             <Route path="/entrar" component={SignIn} />
             <Route path="/registrarse" component={SignUp} />
-            {/* <Route path="/" component={} /> */}
+            <Route path="/nuevo-paralelo" component={NuevoParalelo} />
           </Switch>
         </div>
         :

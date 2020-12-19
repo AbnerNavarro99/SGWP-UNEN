@@ -1,8 +1,9 @@
 .resumenAdminParalelo {
     padding: 20px;
+    background-color: rgb(255, 255, 255);
     border-radius: 5%;
-    border: 1px solid grey;
-    box-shadow: grey;
+    border: 1px solid teal;
+    box-shadow: 10px 5px 5px gray;
     transition: 0.5s ease;
     -moz-transition: 0.5s ease;
     /* Firefox */
@@ -13,7 +14,7 @@
 }
 
 .resumenAdminParalelo:hover {
-    background-color: rgb(228, 227, 227);
+    background-color: #dcecfa;
     transform: scale(1.05);
     -moz-transform: scale(1.05);
     /* Firefox */

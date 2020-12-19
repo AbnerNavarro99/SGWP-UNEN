@@ -38,7 +38,7 @@ class ModalInscripciones extends Component {
                 trigger={this.props.trigger}
             >
                 <p>A continuación {this.props.yaInscrito ?
-                    <span>será eliminado de este paralelo</span>
+                    <span>será eliminado de este verano</span>
                     :
                     <span>será enlistado en este paralelo</span>
                                     }  - {this.props.paralelo.nombreParalelo}. ¿Desea continuar?</p>

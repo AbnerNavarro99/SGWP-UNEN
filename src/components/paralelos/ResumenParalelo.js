@@ -31,10 +31,10 @@ class ResumenParalelo extends React.Component {
 
         const ButtonParalelo = yaInscrito ?
             <Button node="button" className="btn red ligthen-1 z-depth-0 boton-Inscribir">
-                Eliminar Paralelo
+                Eliminar Verano
             </Button> :
             <Button node="button" className="btn green ligthen-1 z-depth-0 boton-Inscribir">
-                Inscribir Paralelo
+                Inscribir Verano
             </Button>
 
         const datePublicacion = paralelo.publicacion.toDate();

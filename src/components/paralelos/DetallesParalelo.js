@@ -66,8 +66,8 @@ class DetallesParalelo extends React.Component {
 
                             >Inscritos actualmente: {paralelo.cantidadInscritos} estudiante(s).</p>
                             <p>Docente impartiente: {paralelo.docente}.</p>
-                            <h4 style={{ textAlign: 'center' }}>Horario del Paralelo</h4>
-                            <img src={paralelo.urlHorario} alt="Horario del Paralelo (Pendiente de Acuerdo)" width="100%" />
+                            <h4 style={{ textAlign: 'center' }}>Horario del Verano</h4>
+                            <img src={paralelo.urlHorario} alt="Horario del Verano (Pendiente de Acuerdo)" width="100%" />
                         </div>
 
                         <div className="card-action text-grey ligthen-4 grey-text">

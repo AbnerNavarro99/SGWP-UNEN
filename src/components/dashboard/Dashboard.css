@@ -1,0 +1,105 @@
+.dashboard {
+    margin-top: 65px;
+}
+
+#forAllDevices {
+    width: 80%;
+    margin: 0 10%;
+}
+
+@media (min-width: 750px) and (max-width: 800px) {
+    #forAllDevices {
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+.footer {
+    clear: both;
+    position: relative;
+    height: 300px;
+    margin-top: -300px;
+    background-color: #222;
+}
+
+.footer>.col {
+    min-height: 250px;
+    text-align: center;
+}
+
+.secondFooter {
+    text-align: center;
+    font-size: 0.8em;
+    clear: both;
+    position: relative;
+    height: 45px;
+    margin-top: -45px;
+    background-color: #000;
+}
+
+.footerHeader {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.emptyblock {
+    min-height: 100px;
+}
+
+.logoUniFcys {
+    max-width: 40px;
+}
+
+.backg-logoUniFcys {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    float: left;
+}
+
+.linkfcys span {
+    font-style: italic;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.linkfcys {
+    border-radius: 2px;
+}
+
+.linkfcys:hover {
+    background-color: #837e7e;
+}
+
+.linkfcys>.col {
+    padding: 0 5px;
+}
+
+.textAbout {
+    color: wheat;
+    text-align: justify;
+    font-style: italic;
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        height: 750px;
+        margin-top: -750px;
+    }
+    .social-media {
+        width: 50px;
+        height: 50px;
+    }
+    .gmailEmail {
+        margin-top: 15px;
+    }
+    .linkfcys {
+        font-size: 16px;
+    }
+    .logoUniFcys {
+        max-width: 60px;
+    }
+    .secondFooter {
+        height: 60px;
+    }
+}
