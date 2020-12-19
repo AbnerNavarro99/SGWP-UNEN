@@ -84,7 +84,7 @@ class DashBoard extends Component {
                                     <div className="col s10 offset-s1 l12">
                                         <p className="textAbout">La Asociación Nacional de Estudiantes de Ciencias y Sistemas somos un equipo de estudiantes que representan al gremio estudiantil de la carrera Ingeniería de Sistemas.</p>
                                     </div>
-                                    <div className="col s12 l10 offset-s1 ">
+                                    <div className="col s11 l10 offset-s1">
                                         <a className="btn" target="_blank" href="https://www.facebook.com/groups/430222640394434">grupo en Facebook</a>
                                     </div>
                                 </div>
