@@ -4,10 +4,13 @@ import {signOut} from '../../store/actions/AuthActions';
 import { connect } from 'react-redux'
 
 const SignedInLinks = (props) =>{
-    const {perfil} = props;
+    const {perfil, auth, usuarios} = props;
+    const id = auth.uid;
+    const miUsuario = usuarios ? usuarios[id] : null;
+    const paralelosInscritos = miUsuario ? miUsuario.paralelosInscritos : null;
     return(
         <ul className="right">
-            <li><NavLink to="/mis-paralelos">Inscritos</NavLink></li>
+            <li><NavLink className="inscritosLI" to="/mis-paralelos"><i class="iadd small material-icons">add</i><span class="new badge">{paralelosInscritos ? paralelosInscritos.length: 0}</span></NavLink></li>
             <li><a href="/" onClick={props.signOut}>Cerrar Sesión</a></li>
             <li><NavLink to="/" className="btn btn-floating pink ligthen-1">{perfil.iniciales}</NavLink></li>
         </ul>
@@ -22,7 +25,9 @@ const mapDispatchToProps = (dispatch) =>{
 
 const mapStateToProps = (state) =>{
     return{
-        perfil : state.firebase.profile
+        auth: state.firebase.auth,
+        perfil : state.firebase.profile,
+        usuarios: state.firestore.data.usuarios
     }
 }
 

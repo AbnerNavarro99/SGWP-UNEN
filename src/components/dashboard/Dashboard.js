@@ -8,6 +8,7 @@ import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import HomePage from './HomePage';
 import './Dashboard.css';
+import EnMantenimiento from './../../Maintaince.png'
 import { Button } from 'materialize-css';
 import UNILOGO from './../../UNI_LOGO.png';
 import GMAIL from './../../gmail.png';
@@ -23,6 +24,7 @@ class DashBoard extends Component {
     componentDidMount = () => {
         const { auth } = this.props;
         // let height = document.getElementById("forallDevices").style.height;
+        // IMPORTANTE DESCOMENTAR CUANDO SE HABILITE EL PANEL DEL USUARIO NUEVAMENTE
         if (auth.uid) {
             let width = document.getElementById("forallDevices").offsetWidth;
 
@@ -42,7 +44,6 @@ class DashBoard extends Component {
         return (
             <div>
                 <div className="dashboard container"
-                // style={{ backgroundColor: "1px solid red" }}
                 >
 
                     <div className="row">
@@ -51,7 +52,6 @@ class DashBoard extends Component {
                         </div>
                     </div>
                     <div className="row"
-                    // style={{ backgroundColor: "1px solid red" }}
                     >
                         <div className="col s12 l7">
                             <ListaParalelos paralelos={paralelos} />
@@ -82,7 +82,7 @@ class DashBoard extends Component {
                                 </div>
                                 <div className="row">
                                     <div className="col s10 offset-s1 l12">
-                                        <p className="textAbout">La Asociación Nacional de Estudiantes de Ciencias y Sistemas somos un equipo de estudiantes que representan al gremio estudiantil de la carrera Ingeniería de Sistemas.</p>
+                                        <p className="textAbout">La Asociación Nacional de Estudiantes de Ciencias y Sistemas somos un equipo que representa al gremio estudiantil de la carrera Ingeniería de Sistemas.</p>
                                     </div>
                                     <div className="col s11 l10 offset-s1">
                                         <a className="btn" target="_blank" href="https://www.facebook.com/groups/430222640394434">grupo en Facebook</a>
@@ -158,12 +158,9 @@ class DashBoard extends Component {
                         </div>
                         <div className="col l1" >
                             <div className="container-fluid">
-                                {/*NOTHING IN HERE */}
                             </div>
                         </div>
-                        {/* <div className="col s12 lastFooter">
-                                
-                        </div> */}
+                        
                     </div>
                 </div>
                 <div className="container-fluid secondFooter">
@@ -173,6 +170,15 @@ class DashBoard extends Component {
                         </div>
                     </div>
                 </div>
+                {/* <div className="container">
+                    <div className="row">
+                        <div className="col s12 m8 l8 white-text offset-l2 offset-m2">
+                            <h1 style={{ textAlign: 'center' }} className="CambiarTamañoPantallaAPequeño">Sitio Web en Mantenimiento</h1>
+                            <img src={EnMantenimiento} alt="" width="100%" />
+                            <h3 style={{ textAlign: 'center' }} className="CambiarTamañoPantallaAPequeño">!Feliz semestre!</h3>
+                        </div>
+                    </div> 
+                </div>*/}
             </div >
         );
     }

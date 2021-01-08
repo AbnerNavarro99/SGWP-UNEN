@@ -1,0 +1,26 @@
+.NuevoPagoContainer * {
+    /* border: 1px solid red; */
+}
+
+.carnetInput {
+    /* border: 1px solid red; */
+    padding: 0px 50px 50px 50px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tableParalelos {
+    margin-top: 20px;
+}
+
+.nombreEstudiante {
+    font-weight: bold;
+}
+
+.contarinerMonto {
+    padding: 0px 15px;
+}
+
+.BotonPago {
+    margin-top: 20px;
+}

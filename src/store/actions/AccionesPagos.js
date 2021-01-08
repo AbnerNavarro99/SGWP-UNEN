@@ -24,8 +24,8 @@ export const NuevoPago = (pago) => {
                     }
 
                     getFirestore()
-                        .collection('pagos')
-                        .add({
+                        .collection('pagos').doc(No)
+                        .set({
                             No,
                             deuda: pago.deuda,
                             reembolso: pago.reembolso,

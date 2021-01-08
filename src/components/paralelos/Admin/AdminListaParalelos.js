@@ -8,12 +8,12 @@ import './AdminListaParalelos.css'
 const ResumenParalelos = ({ paralelos }) => {
     return (
         <div className="col s12 lista-admin-paralelos">
-            <div className="row">
+            <div className="row ResumenTitle">
                 <div style={{ textAlign:'center'}}>
                     <h3>Resumen</h3>
                 </div>
             </div>
-            <div className="row align-center">
+            <div className="row align-center lista">
                 {paralelos &&
                     paralelos.map(par => {
                         return (

@@ -46,7 +46,7 @@ class ResumenParalelo extends React.Component {
                         <div>Publicado por UNEN ANECYS</div>
                         <div>{moment(datePublicacion).format('LL')}</div>
                     </div>
-                    <ModalInscripciones paralelo={paralelo} yaInscrito={true} trigger={ButtonParalelo} onAceptar={this.onEliminar} />
+                    <ModalInscripciones paralelo={paralelo} yaInscrito={true}  trigger={ButtonParalelo} onAceptar={this.onEliminar} />
                 </div>
             </div >
 

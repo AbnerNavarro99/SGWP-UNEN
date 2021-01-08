@@ -13,7 +13,7 @@ class ListaPagos extends React.Component {
 
     state = {
         pagosState: null,
-        paraleloFiltrado : ''
+        paraleloFiltrado: ''
     }
 
     OnFiltrarPorParalelo = (OpcDelFiltro) => {
@@ -28,7 +28,7 @@ class ListaPagos extends React.Component {
             });
             this.setState({ pagosState: pagosTemp, paraleloFiltrado });
         } else {
-            this.setState({ pagosState: pagos , paraleloFiltrado : ''});
+            this.setState({ pagosState: pagos, paraleloFiltrado: '' });
         }
     }
     render() {
@@ -39,12 +39,12 @@ class ListaPagos extends React.Component {
                 costosActualesParalelos = [...costosActualesParalelos, { paralelo: p.nombreParalelo, costoActual: p.costoxEstudiante }];
             });
         let { pagosState } = this.state;
-        if (!pagosState) {
+        if (pagosState === null) {
             pagosState = pagos
         }
         return (
             <div className="col s12 lista-pagos">
-                <div className="row">
+                <div className="row PagosTitle">
                     <div style={{ textAlign: 'center' }}>
                         <h3>Pagos</h3>
                     </div>
@@ -64,31 +64,34 @@ class ListaPagos extends React.Component {
                         sheet="xls"
                         buttonText="Exportar como archivo Excel"
                     />
-                    <table className="responsive-table highlight" style={{ border: '1px solid grey' }} id={"tablaPagos"+this.state.paraleloFiltrado} >
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nombre Estudiante</th>
-                                <th>Paralelo</th>
-                                <th>Monto Pagado</th>
-                                <th>Deuda</th>
-                                <th>Reembolso</th>
-                                <th>Estado</th>
-                                <th></th>
-                            </tr>
-                        </thead>
+                    <div className="containerTablaPagos">
+                        <table className="responsive-table highlight" style={{ border: '1px solid grey' }} id={"tablaPagos" + this.state.paraleloFiltrado} >
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nombre Estudiante</th>
+                                    <th>Paralelo</th>
+                                    <th>Monto Pagado</th>
+                                    <th>Deuda</th>
+                                    <th>Reembolso</th>
+                                    <th>Estado</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            {pagosState &&
-                                pagosState.map((pago, index) => {
-                                    return (
-                                        <Pago idPago={pago.id} costosActualesParalelos={costosActualesParalelos} key={index} />
-                                    )
-                                })
-                            }
-                        </tbody>
-                    </table>
+                            <tbody>
+                                {pagosState &&
+                                    pagosState.map((pago, index) => {
+                                        return (
+                                            <Pago idPago={pago.id} costosActualesParalelos={costosActualesParalelos} key={index} />
+                                        )
+                                    })
+                                }
+                            </tbody>
+                        </table>
 
+
+                    </div>
                 </div>
             </div>
         )
@@ -96,6 +99,7 @@ class ListaPagos extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state.firestore.ordered.pagos);
     return {
         pagos: state.firestore.ordered.pagos,
         paralelos: state.firestore.ordered.paralelosConvocados
@@ -105,8 +109,7 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([{
-        collection: 'pagos',
-        orderBy: ['No', 'asc']
+        collection: 'pagos'
     },
     {
         collection: 'paralelosConvocados'

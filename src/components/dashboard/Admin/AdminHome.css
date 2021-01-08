@@ -1,0 +1,38 @@
+.Gestionar {
+    background-color: white;
+    padding: 20px 0px;
+    margin-top: 30px;
+}
+
+#iconAdd {
+    margin-left: -7px;
+}
+
+.alinearVertical {
+    padding: 15px 0px;
+}
+
+.valign-wrapper h4 {
+    margin: 0;
+}
+
+.Gestionar:hover {
+    cursor: pointer;
+    transition: 0.5s ease;
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    transform: scale(1.1);
+    -moz-transition: 0.5s ease;
+    /* Firefox */
+    -webkit-transition: 0.5s ease;
+    /* Chrome - Safari */
+    -o-transition: 0.5s ease;
+}
+
+#GestionCursos {
+    background-color: #E91E63 !important;
+}
+
+#GestionPagos {
+    background-color: #2BBBAD !important;
+}

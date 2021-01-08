@@ -28,9 +28,9 @@ class InfoxParalelo extends Component {
         let ComponenteAMostrar;
         return (
             <div className="section adminInfoxParalelo">
-                <div className="row">
+                <div className="row RowSideNav">
                     <div className="col s12">
-                        <a href="#" className="sidenav-trigger" data-target="menu-side">
+                        <a href="#" className="sidenav-trigger menuIcon" data-target="menu-side">
                             <i className="material-icons">menu</i>
                         </a>
                     </div>

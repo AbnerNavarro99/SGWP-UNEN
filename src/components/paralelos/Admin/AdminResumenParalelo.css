@@ -1,8 +1,7 @@
 .resumenAdminParalelo {
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     background-color: rgb(255, 255, 255);
-    border-radius: 5%;
-    border: 1px solid teal;
+    border: 1px solid gray;
     box-shadow: 10px 5px 5px gray;
     transition: 0.5s ease;
     -moz-transition: 0.5s ease;
@@ -13,16 +12,25 @@
     /* Opera */
 }
 
+@media screen and (max-width: 550px) {
+    .tituloParalelo {
+        font-size: 1em;
+    }
+    .resumenAdminParalelo {
+        padding: 0px;
+    }
+}
+
 .resumenAdminParalelo:hover {
-    background-color: #dcecfa;
-    transform: scale(1.05);
-    -moz-transform: scale(1.05);
+    background-color: #dcdddd;
+    transform: scale(1.03);
+    -moz-transform: scale(1.03);
     /* Firefox */
-    -webkit-transform: scale(1.05);
+    -webkit-transform: scale(1.03);
     /* Chrome - Safari */
-    -o-transform: scale(1.05);
+    -o-transform: scale(1.03);
     /* Opera */
-    -ms-transform: scale(1.05);
+    -ms-transform: scale(1.03);
     /* IE9 */
 }
 

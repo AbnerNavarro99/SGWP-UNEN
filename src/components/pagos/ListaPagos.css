@@ -3,6 +3,13 @@
     padding: 1vh 0;
 }
 
-.responsive-table {
+.containerTablaPagos {
     max-height: 450px;
+    overflow-y: scroll;
+}
+
+.PagosTitle {
+    -webkit-box-shadow: 0px 7px 6px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 7px 6px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 7px 6px -3px rgba(0, 0, 0, 0.75);
 }

@@ -1,29 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
-import {signOut} from '../../../store/actions/AuthActions';
-import { connect } from 'react-redux'
+import { signOut } from '../../../store/actions/AuthActions';
+import { connect } from 'react-redux';
 
-const AdminSignedInLinks = (props) =>{
-    const {perfil} = props;
-    return(
-        <ul className="right">
-            <li><a href="/" onClick={props.signOut}>Cerrar Sesión</a></li>
-            <li><NavLink to="/" className="btn btn-floating pink ligthen-1">{perfil.iniciales}</NavLink></li>
-        </ul>
-    );
+class AdminSignedInLinks extends Component {
+
+    render() {
+        const { perfil } = this.props;
+
+        return (
+            <ul className="right">
+                <li><a href="/" onClick={this.props.signOut}>Cerrar Sesión</a></li>
+                <li><a className="btn btn-floating pink ligthen-1">{perfil.iniciales}</a></li>
+            </ul>
+        );
+    }
 }
 
-const mapDispatchToProps = (dispatch) =>{
+const mapDispatchToProps = (dispatch) => {
     return {
-        signOut : () => dispatch(signOut())
+        signOut: () => dispatch(signOut())
     }
 }
 
-const mapStateToProps = (state) =>{
-    return{
-        perfil : state.firebase.profile
+const mapStateToProps = (state) => {
+    return {
+        perfil: state.firebase.profile
     }
 }
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(AdminSignedInLinks);
+export default connect(mapStateToProps, mapDispatchToProps)(AdminSignedInLinks);

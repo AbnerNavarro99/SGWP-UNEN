@@ -33,7 +33,7 @@ class ResumenParalelo extends React.Component {
             <Button node="button" className="btn red ligthen-1 z-depth-0 boton-Inscribir">
                 Eliminar Verano
             </Button> :
-            <Button node="button" className="btn green ligthen-1 z-depth-0 boton-Inscribir">
+            <Button disabled node="button" className="btn green ligthen-1 z-depth-0 boton-Inscribir">
                 Inscribir Verano
             </Button>
 

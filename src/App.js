@@ -12,6 +12,8 @@ import { connect } from 'react-redux';
 import NotFound from './components/dashboard/NotFound';
 import InfoxParalelo from './components/paralelos/Admin/InfoxParalelo';
 import NuevoParalelo from './components/paralelos/NuevoParalelo';
+import GestionCursos from './components/cursos/GestionCursos';
+
 
 function App(props) {
   const { isAdmin } = props;
@@ -27,6 +29,7 @@ function App(props) {
             <Route path="/entrar" component={SignIn} />
             <Route path="/registrarse" component={SignUp} />
             <Route path="/nuevo-paralelo" component={NuevoParalelo} />
+            <Route path="/home/cursos/" component={GestionCursos} />
           </Switch>
         </div>
         :

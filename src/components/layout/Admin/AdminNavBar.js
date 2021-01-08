@@ -10,17 +10,19 @@ const NavBar = (props) => {
     const { auth } = props;
 
     return (
-        <nav className="nav-wrapper blue darken-1 NavBar">
-            <div className="container">
-                <Link to="/admin/dashboard" className="brand-logo left"><img width="65px" src={brandlogo} alt="SGWP"/> </Link>
-                {
-                    auth.uid ?
-                        <AdminSignedInLinks />
-                        :
-                        <SignedOutLinks />
-                }
-            </div>
-        </nav>
+        <div className="navbar-fixed">
+            <nav className="nav-wrapper blue darken-1 NavBar">
+                <div className="container">
+                    <Link to="/admin/home" className="brand-logo left"><img width="65px" src={brandlogo} alt="SGWP" /> </Link>
+                    {
+                        auth.uid ?
+                            <AdminSignedInLinks />
+                            :
+                            <SignedOutLinks />
+                    }
+                </div>
+            </nav>
+        </div>
     );
 }
 

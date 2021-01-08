@@ -21,14 +21,19 @@ const SideBar = ({ perfil }) => {
                 </div>
             </li>
             <li>
-                <a href="/admin/dashboard">
-                    <i className="material-icons">info</i>
+                <a href="/admin/home">
+                    <i className="material-icons">home</i>
+                    <span>DashBoard</span>
+                </a>
+                <a href="/admin/resumen">
+                    <i className="material-icons">book</i>
                     <span>Resumen</span>
                 </a>
                 <a href="/admin/pagos">
-                    <i className="material-icons">view_list</i>
+                    <i className="material-icons">attach_money</i>
                     <span>Pagos</span>
                 </a>
+
             </li>
         </ul>
     )

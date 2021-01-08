@@ -38,10 +38,10 @@ class DetallesParalelo extends React.Component {
         if (!auth.uid) return <Redirect to="/" />
         const ButtonParalelo = yaInscrito ?
             <Button node="button" className="btn red ligthen-1 z-depth-0 boton-Inscribir">
-                Eliminar Paralelo
+                Eliminar Verano
             </Button> :
-            <Button node="button" className="btn green ligthen-1 z-depth-0 boton-Inscribir">
-                Inscribir Paralelo
+            <Button disabled node="button" className="btn green ligthen-1 z-depth-0 boton-Inscribir">
+                Inscribir Verano
             </Button>
 
         if (paralelo) {

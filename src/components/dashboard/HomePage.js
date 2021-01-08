@@ -75,8 +75,8 @@ class HomePage extends Component {
                         <h1 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">Sitio Web en Mantenimiento</h1>
                         <img src={EnMantenimiento} alt="" width="100%"/>
                         <h3 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">!Feliz semestre!</h3>
-                    </div> 
-                    */}
+                    </div>  */}
+                   
                 </div>
             </div >
         );
