@@ -1,0 +1,57 @@
+.CursoActivo {
+    border: 1px solid gray;
+    margin-bottom: 20px;
+    background-color: #212121;
+}
+
+#iconModificar {
+    margin-top: 15px;
+    color: #1E88E5;
+}
+
+@media only screen and (min-width: 500px) {
+    #iconModificar {
+        margin-left: -15px;
+    }
+    .CursoActivo:hover {
+        cursor: pointer;
+        transform: scale(1.10);
+        -moz-transform: scale(1.10);
+        /* Firefox */
+        -webkit-transform: scale(1.10);
+        /* Chrome - Safari */
+        -o-transform: scale(1.10);
+        /* Opera */
+        -ms-transform: scale(1.10);
+        /* IE9 */
+        transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        /* Firefox */
+        -webkit-transition: 0.5s ease;
+        /* Chrome - Safari */
+        -o-transition: 0.5s ease;
+        /* Opera */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .CursoActivo:active {
+        cursor: pointer;
+        transform: scale(1.10);
+        -moz-transform: scale(1.10);
+        /* Firefox */
+        -webkit-transform: scale(1.10);
+        /* Chrome - Safari */
+        -o-transform: scale(1.10);
+        /* Opera */
+        -ms-transform: scale(1.10);
+        /* IE9 */
+        transition: 0.1s ease;
+        -moz-transition: 0.1s ease;
+        /* Firefox */
+        -webkit-transition: 0.1s ease;
+        /* Chrome - Safari */
+        -o-transition: 0.1s ease;
+        /* Opera */
+    }
+}

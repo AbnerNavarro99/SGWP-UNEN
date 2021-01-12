@@ -1,0 +1,43 @@
+.TituloCurso {
+    background-color: white;
+    margin-top: 60px;
+    padding: 15px 15px 0px 15px;
+}
+
+.nombreParalelo {
+    background-color: white;
+}
+
+.ModificarCurso {
+    overflow-y: scroll;
+    max-height: 700px;
+}
+
+textarea {
+    width: 550px;
+    height: 120px;
+    border: 3px solid #cccccc;
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+    resize: none;
+    background-color: white;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+}
+
+input {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+section {
+    background-color: #193044;
+    color: white;
+    padding: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.puntoDecimalCostoTotal,
+.valorCurso {
+    margin-left: -15px !important;
+}

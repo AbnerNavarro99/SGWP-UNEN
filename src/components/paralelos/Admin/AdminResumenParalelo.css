@@ -3,13 +3,6 @@
     background-color: rgb(255, 255, 255);
     border: 1px solid gray;
     box-shadow: 10px 5px 5px gray;
-    transition: 0.5s ease;
-    -moz-transition: 0.5s ease;
-    /* Firefox */
-    -webkit-transition: 0.5s ease;
-    /* Chrome - Safari */
-    -o-transition: 0.5s ease;
-    /* Opera */
 }
 
 @media screen and (max-width: 550px) {
@@ -32,6 +25,13 @@
     /* Opera */
     -ms-transform: scale(1.03);
     /* IE9 */
+    transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    /* Firefox */
+    -webkit-transition: 0.5s ease;
+    /* Chrome - Safari */
+    -o-transition: 0.5s ease;
+    /* Opera */
 }
 
 .p-info {
