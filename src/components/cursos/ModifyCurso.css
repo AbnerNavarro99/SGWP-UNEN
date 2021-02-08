@@ -1,7 +1,9 @@
 .TituloCurso {
     background-color: white;
     margin-top: 60px;
-    padding: 15px 15px 0px 15px;
+    padding: 15px 5px 15px 5px;
+    border: 2px solid black;
+    border-bottom: none;
 }
 
 .nombreParalelo {
@@ -10,23 +12,25 @@
 
 .ModificarCurso {
     overflow-y: scroll;
-    max-height: 700px;
+    max-height: 550px;
+    padding: 50px;
+    margin-top: 20px;
 }
 
 textarea {
-    width: 550px;
+    width: inherit;
     height: 120px;
     border: 3px solid #cccccc;
     padding: 5px;
     font-family: Tahoma, sans-serif;
     resize: none;
-    background-color: white;
-    color: black;
+    background-color: inherit;
+    color: #26A69A;
     font-family: 'Rubik', sans-serif;
 }
 
 input {
-    color: white;
+    color: #26A69A;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -40,4 +44,9 @@ section {
 .puntoDecimalCostoTotal,
 .valorCurso {
     margin-left: -15px !important;
+}
+
+form {
+    padding: 0;
+    margin: 0;
 }

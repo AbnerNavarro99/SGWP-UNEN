@@ -11,7 +11,9 @@ const AdminResumenParalelo = ({ paralelo }) => {
                         <span className="card-title" style={{}}><h3 className="tituloParalelo">{paralelo.nombreParalelo}</h3></span>
                         <p className="valign-wrapper p-info"><i className="material-icons" style={{ paddingRight: "15px" }}>account_circle</i> Estudiantes inscritos: {paralelo.cantidadInscritos}</p>
                         <p className="valign-wrapper p-info"><i className="material-icons" style={{ paddingRight: "15px" }}>add_to_queue</i>Publicado por UNEN ANECYS</p>
-                        <p className="valign-wrapper p-info"><i className="material-icons" style={{ paddingRight: "15px" }}>attach_money</i>Costo Actual del Paralelo: <span className="blue-text" style={{ fontWeight: "bold" }}>C$ {paralelo.costoxEstudiante}.00</span></p>
+                        <p className="valign-wrapper p-info"><i className="material-icons" style={{ paddingRight: "15px" }}>attach_money</i>Costo Actual del Paralelo: 
+                        {/* <span className="blue-text" style={{ fontWeight: "bold" }}>C$ {paralelo.costoxEstudiante}.00</span> */}
+                        </p>
                         <br />
                         <p className="grey-text">{pub.slice(0, 6)} 2020</p>
                     </div>

@@ -79,8 +79,34 @@ export const EliminarInscripcion = (idParalelo) => {
 export const AnhadirParalelo = (paralelo) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         //make async call to DB
-        dispatch({
-            type: 'ANHADIR_PARALELO', paralelo
+        const firestore = getFirestore();
+        const state = getState();
+
+        var docParalelo = firestore.collection('paralelosConvocados').doc(paralelo.idParalelo);
+        // console.log(docParaleloTemp);
+        let docParaleloTemp = docParalelo;
+        let NOMBRE_PARALELO = (paralelo.nombreParalelo != "") ? paralelo.nombreParalelo : docParaleloTemp.nombreParalelo;
+        let COSTO_TOTAL_PARALELO = (paralelo.costoTotal != "") ? paralelo.costoTotal : docParaleloTemp.costoTotal;
+        let DESCRIPCION_PARALELO = (paralelo.descripcion != "") ? paralelo.descripcion : docParaleloTemp.descripcion;
+        let FRECUENCIA_PARALELO = (paralelo.frecuenciaSemanal != "") ? paralelo.frecuenciaSemanal : docParaleloTemp.frecuenciaSemanal;
+        let CREDITOS_PARALELO = (paralelo.creditos != "") ? paralelo.creditos : docParaleloTemp.creditos
+        let DOCENTE_PARALELO = (paralelo.docente != "") ? paralelo.docente : docParaleloTemp.docente
+
+        docParalelo.update({
+            nombreParalelo: NOMBRE_PARALELO,
+            docente: DOCENTE_PARALELO,
+            descripcion: DESCRIPCION_PARALELO,
+            frecuenciaSemanal: FRECUENCIA_PARALELO,
+            creditos: CREDITOS_PARALELO,
+            costoTotal: COSTO_TOTAL_PARALELO,
+        }).then(() => {
+            dispatch({
+                type: 'ANHADIR_PARALELO', paralelo
+            })
+        }).catch((err) => {
+            dispatch({
+                type: 'ANHADIR_PARALELO_ERROR', err
+            })
         })
     }
 }
