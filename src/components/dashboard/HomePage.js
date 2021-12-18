@@ -70,14 +70,12 @@ class HomePage extends Component {
                             </div>
                         </div>
                     </div>
-                   
-                    {/* <div className="col s12 m8 l8 white-text offset-l2 offset-m2">
-                        <h1 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">Sitio Web en Mantenimiento</h1>
-                        <img src={EnMantenimiento} alt="" width="100%"/>
-                        <h3 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">!Feliz semestre!</h3>
-                    </div>  */}
-                   
                 </div>
+                <div className="col s12 m8 l8 white-text offset-l2 offset-m2">
+                        {/* <h1 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">Sitio Web en Mantenimiento</h1> */}
+                        <img src="https://firebasestorage.googleapis.com/v0/b/sistema-web-paralelos-unen.appspot.com/o/NoBgLogoOriginal.png?alt=media&token=690cefa9-a6f4-4ccc-aa9b-fd281155f773" alt="" width="20%" style={{marginLeft : '40%'}}/>
+                        <h3 style={{textAlign : 'center'}} className="CambiarTamañoPantallaAPequeño">Sistema de Gestión Web <br /> Cursos Nodales</h3>
+                    </div> 
             </div >
         );
     }

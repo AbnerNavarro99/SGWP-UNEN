@@ -13,11 +13,23 @@ class ResumenParalelo extends React.Component {
     }
 
     render() {
-        const { paralelo } = this.props;
-        const ButtonParalelo =
+        const { paralelo, paralelosInscritos } = this.props;
+        let yaInscrito = false;
+        paralelosInscritos &&
+            paralelosInscritos.forEach(p => {
+                if (p === paralelo.id) {
+                    yaInscrito = true;
+                }
+            });
+
+        const ButtonParalelo = yaInscrito ?
             <Button node="button" className="btn red ligthen-1 z-depth-0 boton-Inscribir">
                 Eliminar Verano
+            </Button> :
+            <Button node="button" className="btn green ligthen-1 z-depth-0 boton-Inscribir">
+                Inscribir Verano
             </Button>
+
         const datePublicacion = paralelo.publicacion.toDate();
         moment.locale('es');
         return (

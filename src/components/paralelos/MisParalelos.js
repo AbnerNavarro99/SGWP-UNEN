@@ -26,7 +26,7 @@ const MisParalelos = (props) => {
             {paralelosAMostrar &&
                 paralelosAMostrar.map(paralelo => {
                     return (
-                        <ResumenMisParalelos paralelo={paralelo} key={paralelo.id} />
+                        <ResumenMisParalelos paralelo={paralelo} key={paralelo.id} paralelosInscritos={paralelosInscritos} />
                     )
                 })
             }

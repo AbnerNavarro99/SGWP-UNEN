@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import './ModifyCurso.css';
 import { compose } from 'redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux';
 import { Button } from 'react-materialize';
-import { ModifyParalelo } from '../../store/actions/AccionesParalelo';
+import { AnadirParalelo } from '../../store/actions/AccionesParalelo';
 
-class ModifyCurso extends Component {
+
+class AddCurso extends Component {
 
     constructor(props) {
         super(props);
         this.state= {
+            nombreParalelo: "",
+            docente: "",
+            descripcion: "",
+            frecuenciaSemanal: 0,
+            creditos: 0,
+            costoTotal: 0,
         }
     }
 
@@ -29,21 +35,11 @@ class ModifyCurso extends Component {
 
     GuardarCambios = (e) => {
         e.preventDefault();
-        let objParalelo = {
-            idParalelo : this.props.id,
-            nombreParalelo : this.state.nombreParalelo ? this.state.nombreParalelo : this.props.paralelo.nombreParalelo,
-            descripcion : this.state.descripcion ? this.state.descripcion : this.props.paralelo.descripcion,
-            creditos : this.state.creditos ? this.state.creditos : this.props.paralelo.creditos,
-            frecuenciaSemanal : this.state.frecuenciaSemanal ? this.state.frecuenciaSemanal : this.props.paralelo.frecuenciaSemanal,
-            costoTotal : this.state.costoTotal ? this.state.costoTotal : this.props.paralelo.costoTotal,
-            docente : this.state.docente ? this.state.docente : this.props.paralelo.docente,
-        }
-
-        this.props.AnhadirParalelo(objParalelo);
+        this.props.AnadirParalelo(this.state);
     }
 
     render() {
-        const { paralelo } = this.props;
+        const { paralelo } = this.state;
         return (
             <div className="container-fluid ">
                 <div className="container TituloCurso">
@@ -143,30 +139,30 @@ class ModifyCurso extends Component {
 }
 
 
-const mapStateToProps = (state, ownProps) => {
-    const id = ownProps.match.params.id;
-    const paralelosData = state.firestore.data.paralelosConvocados;
-    let paralelo;
-    (paralelosData) ?
-        paralelo = paralelosData[id]
-        :
-        paralelo = null;
-    return {
-        paralelo,
-        id
-    }
-}
+// const mapStateToProps = (state, ownProps) => {
+//     const id = ownProps.match.params.id;
+//     const paralelosData = state.firestore.data.paralelosConvocados;
+//     let paralelo;
+//     (paralelosData) ?
+//         paralelo = paralelosData[id]
+//         :
+//         paralelo = null;
+//     return {
+//         paralelo,
+//         id
+//     }
+// }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        AnhadirParalelo: (paralelo) => dispatch(ModifyParalelo(paralelo))
+        AnadirParalelo: (paralelo) => dispatch(AnadirParalelo(paralelo))
     }
 }
 
-export default compose(connect(mapStateToProps, mapDispatchToProps),
+export default compose(connect(null, mapDispatchToProps),
     firestoreConnect([
         {
             collection: 'paralelosConvocados'
         }
     ])
-)(ModifyCurso)
+)(AddCurso)

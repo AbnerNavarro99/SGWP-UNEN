@@ -10,7 +10,7 @@ const SignedInLinks = (props) =>{
     const paralelosInscritos = miUsuario ? miUsuario.paralelosInscritos : null;
     return(
         <ul className="right">
-            <li><NavLink className="inscritosLI" to="/mis-paralelos"><i class="iadd small material-icons">add</i><span class="new badge">{paralelosInscritos ? paralelosInscritos.length: 0}</span></NavLink></li>
+            <li><NavLink className="inscritosLI" to="/mis-paralelos"><i class="small material-icons">shopping_cart_checkout</i><span class="new badge">{paralelosInscritos ? paralelosInscritos.length: 0}</span></NavLink></li>
             <li><a href="/" onClick={props.signOut}>Cerrar Sesión</a></li>
             <li><NavLink to="/" className="btn btn-floating pink ligthen-1">{perfil.iniciales}</NavLink></li>
         </ul>

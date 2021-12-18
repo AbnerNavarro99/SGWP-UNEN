@@ -13,7 +13,7 @@ const NavBar = (props) => {
         <div className="navbar-fixed">
             <nav className="nav-wrapper blue darken-1 NavBar">
                 <div className="container">
-                    <Link to="/admin/home" className="brand-logo left"><img width="65px" src={brandlogo} alt="SGWP" /> </Link>
+                    <Link to="/admin/home" className="brand-logo left"><img width="65px" src="https://firebasestorage.googleapis.com/v0/b/sistema-web-paralelos-unen.appspot.com/o/NoBgLogoOriginal.png?alt=media&token=690cefa9-a6f4-4ccc-aa9b-fd281155f773" alt="SGWP" /> </Link>
                     {
                         auth.uid ?
                             <AdminSignedInLinks />

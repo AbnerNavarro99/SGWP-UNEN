@@ -13,9 +13,13 @@ const ParaleloReducer = (state = initState, action) => {
             return state;
         case 'ELIMINAR_INSCRIPCION_ERROR':
             return state;
-        case 'ANHADIR_PARALELO':
+        case 'MODIFY_PARALELO':
             return state;
-        case 'ANHADIR_PARALELO_ERROR':
+        case 'MODIFY_PARALELO_ERROR':
+            return state;
+        case 'ANADIR_PARALELO':
+            return state;
+        case 'ANADIR_PARALELO_ERROR':
             return state;
         default:
             return state;

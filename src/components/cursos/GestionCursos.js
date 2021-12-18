@@ -9,6 +9,7 @@ class GestionCursos extends Component {
         return (
             <div className="container-fluid GestionCursos">
             <div className="row">
+            <Link to={"nuevo-curso"} className="black-text">
                 <div className="col s12 m4 offset-m2">
                     <div className="container-fluid Gestionar" id="NuevoCurso">
                         <div className="row valign-wrapper alinearVertical">
@@ -21,7 +22,7 @@ class GestionCursos extends Component {
                         </div>
                     </div>
                 </div>
-
+            </Link>
 
                 <Link to={"lista-cursos"} className="white-text">
                     <div className="col s12 m4 white-text">
@@ -33,7 +34,6 @@ class GestionCursos extends Component {
                                 <div className="col s7 Titulo">
                                     <h4>Lista Cursos Activos</h4>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>

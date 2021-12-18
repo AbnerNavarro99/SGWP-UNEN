@@ -71,41 +71,58 @@ export const EliminarInscripcion = (idParalelo) => {
             },
                 { merge: true });
         }
-        
+
 
     }
 }
 
-export const AnhadirParalelo = (paralelo) => {
-    return (dispatch, getState, { getFirebase, getFirestore }) => {
+
+export const ModifyParalelo = (paralelo) => {
+    return (dispatch, getState, { getFirestore }) => {
         //make async call to DB
         const firestore = getFirestore();
-        const state = getState();
 
         var docParalelo = firestore.collection('paralelosConvocados').doc(paralelo.idParalelo);
-        // console.log(docParaleloTemp);
-        let docParaleloTemp = docParalelo;
-        let NOMBRE_PARALELO = (paralelo.nombreParalelo != "") ? paralelo.nombreParalelo : docParaleloTemp.nombreParalelo;
-        let COSTO_TOTAL_PARALELO = (paralelo.costoTotal != "") ? paralelo.costoTotal : docParaleloTemp.costoTotal;
-        let DESCRIPCION_PARALELO = (paralelo.descripcion != "") ? paralelo.descripcion : docParaleloTemp.descripcion;
-        let FRECUENCIA_PARALELO = (paralelo.frecuenciaSemanal != "") ? paralelo.frecuenciaSemanal : docParaleloTemp.frecuenciaSemanal;
-        let CREDITOS_PARALELO = (paralelo.creditos != "") ? paralelo.creditos : docParaleloTemp.creditos
-        let DOCENTE_PARALELO = (paralelo.docente != "") ? paralelo.docente : docParaleloTemp.docente
 
         docParalelo.update({
-            nombreParalelo: NOMBRE_PARALELO,
-            docente: DOCENTE_PARALELO,
-            descripcion: DESCRIPCION_PARALELO,
-            frecuenciaSemanal: FRECUENCIA_PARALELO,
-            creditos: CREDITOS_PARALELO,
-            costoTotal: COSTO_TOTAL_PARALELO,
+            nombreParalelo: paralelo.nombreParalelo,
+            docente: paralelo.docente,
+            descripcion: paralelo.descripcion,
+            frecuenciaSemanal: paralelo.frecuenciaSemanal,
+            creditos: paralelo.creditos,
+            costoTotal: paralelo.costoTotal,
         }).then(() => {
             dispatch({
-                type: 'ANHADIR_PARALELO', paralelo
-            })
+                type: 'MODIFY_PARALELO', paralelo
+            });
+            window.location.reload();
         }).catch((err) => {
             dispatch({
-                type: 'ANHADIR_PARALELO_ERROR', err
+                type: 'MODIFY_PARALELO_ERROR', err
+            })
+        })
+    }
+}
+
+export const AnadirParalelo = (paralelo) => {
+    return (dispatch, getState, { getFirestore }) => {
+        const firestore = getFirestore();
+
+        firestore.collection('paralelosConvocados').add({
+            nombreParalelo: paralelo.nombreParalelo,
+            docente: paralelo.docente,
+            descripcion: paralelo.descripcion,
+            frecuenciaSemanal: paralelo.frecuenciaSemanal,
+            creditos: paralelo.creditos,
+            costoTotal: paralelo.costoTotal,
+        }).then(() => {
+            dispatch({
+                type: 'ANADIR_PARALELO', paralelo
+            });
+            window.location.reload();
+        }).catch((err) => {
+            dispatch({
+                type: 'ANADIR_PARALELO_ERROR', err
             })
         })
     }
